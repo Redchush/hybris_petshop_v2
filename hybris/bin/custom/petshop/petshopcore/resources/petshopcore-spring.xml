@@ -12,14 +12,14 @@
 -->
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns:context="http://www.springframework.org/schema/context"
+			 xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
-     <context:annotation-config/> 
+	<context:annotation-config/>
 
 	<!-- Spring Integration -->
 	<import resource="classpath:/petshopcore/integration/hot-folder-store-electronics-spring.xml"/>
@@ -28,27 +28,26 @@
 
 	<!-- SystemSetup for the PetshopCore -->
 	<bean id="acceleratorCoreSystemSetup" class="de.hybris.petshop.core.setup.CoreSystemSetup"
-	       parent="abstractCoreSystemSetup"/>
+				parent="abstractCoreSystemSetup"/>
 
 	<!-- Solr field value providers -->
-	
 	<bean id="volumeAwareProductPriceValueProvider" class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.VolumeAwareProductPriceValueProvider"  parent="abstractPropertyFieldValueProvider">
-        <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
-        <property name="priceService" ref="priceService"/>
-        <property name="commonI18NService" ref="commonI18NService"/>
-        <property name="sessionService" ref="sessionService"/>
-        <property name="userService" ref="userService"/>
-        <property name="priceComparator" ref="volumePriceComparator"/>
-        <property name="catalogVersionService" ref="catalogVersionService"/>
-    </bean>
+		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+		<property name="priceService" ref="priceService"/>
+		<property name="commonI18NService" ref="commonI18NService"/>
+		<property name="sessionService" ref="sessionService"/>
+		<property name="userService" ref="userService"/>
+		<property name="priceComparator" ref="volumePriceComparator"/>
+		<property name="catalogVersionService" ref="catalogVersionService"/>
+	</bean>
 
-    <bean id="volumePriceComparator" class="de.hybris.petshop.core.comparators.VolumeAwarePriceInformationComparator" scope="singleton"/>
+	<bean id="volumePriceComparator" class="de.hybris.petshop.core.comparators.VolumeAwarePriceInformationComparator" scope="singleton"/>
 
-    <bean id="productVolumePricesProvider" class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.ProductVolumePricesProvider"  parent="abstractPropertyFieldValueProvider">
-        <property name="fieldNameProvider" ref="solrFieldNameProvider"/>
-        <property name="priceService" ref="priceService"/>
-    </bean>
-	
+	<bean id="productVolumePricesProvider" class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.ProductVolumePricesProvider"  parent="abstractPropertyFieldValueProvider">
+		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+		<property name="priceService" ref="priceService"/>
+	</bean>
+
 
 	<bean id="electronicsCategorySource" parent="abstractCategorySource">
 		<property name="rootCategory" value="1"/>
@@ -72,14 +71,14 @@
 	</bean>
 
 	<bean id="abstractCategoryCodeValueProvider" abstract="true"
-	      class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.CategoryCodeValueProvider"
-	      parent="abstractPropertyFieldValueProvider" >
+				class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.CategoryCodeValueProvider"
+				parent="abstractPropertyFieldValueProvider" >
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 		<property name="commonI18NService" ref="commonI18NService"/>
 	</bean>
 	<bean id="abstractCategoryNameValueProvider" abstract="true"
-	      class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.CategoryNameValueProvider"
-	      parent="abstractPropertyFieldValueProvider" >
+				class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.CategoryNameValueProvider"
+				parent="abstractPropertyFieldValueProvider" >
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 		<property name="commonI18NService" ref="commonI18NService"/>
 	</bean>
@@ -133,8 +132,8 @@
 	</bean>
 
 	<bean id="productUrlValueProvider"
-	      class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.ProductUrlValueProvider"
-	      parent="abstractPropertyFieldValueProvider" >
+				class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.ProductUrlValueProvider"
+				parent="abstractPropertyFieldValueProvider" >
 		<property name="urlResolver" ref="productModelUrlResolver"/>
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 		<property name="i18nService" ref="i18nService"/>
@@ -142,54 +141,54 @@
 	</bean>
 
 	<bean id="promotionCodeValueProvider"
-	      class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PromotionCodeValueProvider"
-	      parent="abstractPropertyFieldValueProvider" >
+				class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PromotionCodeValueProvider"
+				parent="abstractPropertyFieldValueProvider" >
 		<property name="promotionsService" ref="promotionsService"/>
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 	</bean>
 
 	<bean id="promotionImageValueProvider"
-	      class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PrimaryPromotionImageValueProvider"
-	      parent="abstractPropertyFieldValueProvider" >
+				class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PrimaryPromotionImageValueProvider"
+				parent="abstractPropertyFieldValueProvider" >
 		<property name="promotionsService" ref="promotionsService"/>
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 	</bean>
 
 	<bean id="colorFacetValueProvider"
-	      class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.ColorFacetValueProvider"
-	       parent="abstractPropertyFieldValueProvider">
+				class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.ColorFacetValueProvider"
+				parent="abstractPropertyFieldValueProvider">
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 	</bean>
 
 	<bean id="colorFacetDisplayNameProvider"
-	      class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.ColorFacetDisplayNameProvider"
-	      >
+				class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.ColorFacetDisplayNameProvider"
+	>
 		<property name="enumerationService" ref="enumerationService"/>
 		<property name="i18nService" ref="i18nService"/>
 		<property name="commonI18NService" ref="commonI18NService"/>
 	</bean>
-	
+
 	<bean id="apparelPointOfServiceFacetDisplayNameProvider"
-	      class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider"
-	      >
+				class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider"
+	>
 		<property name="pointOfServiceService" ref="pointOfServiceService"/>
 	</bean>
-	
+
 	<bean id="electronicsPointOfServiceFacetDisplayNameProvider"
-	      class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider"
-	      >
+				class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider"
+	>
 		<property name="pointOfServiceService" ref="pointOfServiceService"/>
 	</bean>
 
 	<bean id="genderValueProvider"
-	      class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.GenderValueProvider"
-	       parent="abstractPropertyFieldValueProvider">
+				class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.GenderValueProvider"
+				parent="abstractPropertyFieldValueProvider">
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 	</bean>
 
 	<bean id="genderFacetDisplayNameProvider"
-	      class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.GenderFacetDisplayNameProvider"
-	      >
+				class="de.hybris.petshop.core.search.solrfacetsearch.provider.impl.GenderFacetDisplayNameProvider"
+	>
 		<property name="enumerationService" ref="enumerationService"/>
 		<property name="i18nService" ref="i18nService"/>
 		<property name="commonI18NService" ref="commonI18NService"/>
@@ -200,22 +199,22 @@
 		must be configured with a lookup method.
 	-->
 	<bean id="orderCancelledEventListener"
-	      class="de.hybris.petshop.core.event.OrderCancelledEventListener" parent="abstractSiteEventListener">
+				class="de.hybris.petshop.core.event.OrderCancelledEventListener" parent="abstractSiteEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="orderRefundEventListener"
-	      class="de.hybris.petshop.core.event.OrderRefundEventListener" parent="abstractSiteEventListener">
+				class="de.hybris.petshop.core.event.OrderRefundEventListener" parent="abstractSiteEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="customerRegistrationEventListener"
-	      class="de.hybris.petshop.core.event.RegistrationEventListener" parent="abstractSiteEventListener">
+				class="de.hybris.petshop.core.event.RegistrationEventListener" parent="abstractSiteEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="forgottenPasswordEventListener"
-	      class="de.hybris.petshop.core.event.ForgottenPasswordEventListener" parent="abstractSiteEventListener">
+				class="de.hybris.petshop.core.event.ForgottenPasswordEventListener" parent="abstractSiteEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
@@ -225,32 +224,32 @@
 		<property name="baseStoreService" ref="baseStoreService"/>
 	</bean>
 	<bean id="orderConfirmationEventListener"
-	      class="de.hybris.petshop.core.event.OrderConfirmationEventListener" parent="abstractSiteEventListener">
+				class="de.hybris.petshop.core.event.OrderConfirmationEventListener" parent="abstractSiteEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="sendDeliveryMessageEventListener"
-	      class="de.hybris.petshop.core.event.SendDeliveryMessageEventListener" parent="abstractEventListener">
+				class="de.hybris.petshop.core.event.SendDeliveryMessageEventListener" parent="abstractEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="sendReadyForPickupMessageEventListener"
-	      class="de.hybris.petshop.core.event.SendReadyForPickupMessageEventListener" parent="abstractEventListener">
+				class="de.hybris.petshop.core.event.SendReadyForPickupMessageEventListener" parent="abstractEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="sendOrderPartiallyCanceledMessageEventListener"
-	      class="de.hybris.petshop.core.event.SendOrderPartiallyCanceledMessageEventListener" parent="abstractEventListener">
+				class="de.hybris.petshop.core.event.SendOrderPartiallyCanceledMessageEventListener" parent="abstractEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="sendOrderPartiallyRefundedMessageEventListener"
-	      class="de.hybris.petshop.core.event.SendOrderPartiallyRefundedMessageEventListener" parent="abstractEventListener">
+				class="de.hybris.petshop.core.event.SendOrderPartiallyRefundedMessageEventListener" parent="abstractEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
 	<bean id="sendNotPickedUpConsignmentCanceledMessageEventListener"
-	      class="de.hybris.petshop.core.event.SendNotPickedUpConsignmentCanceledMessageEventListener" parent="abstractEventListener">
+				class="de.hybris.petshop.core.event.SendNotPickedUpConsignmentCanceledMessageEventListener" parent="abstractEventListener">
 		<property name="modelService" ref="modelService"/>
 		<property name="businessProcessService" ref="businessProcessService"/>
 	</bean>
@@ -262,60 +261,60 @@
 	<!-- Process resources definition -->
 
 	<bean id="customerRegistrationEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/customerRegistrationEmailProcess.xml"/>
 	</bean>
 	<bean id="forgottenPasswordEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/forgottenPasswordEmailProcess.xml"/>
 	</bean>
 	<bean id="orderConfirmationEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/orderConfirmationEmailProcess.xml"/>
 	</bean>
 	<bean id="sendDeliveryEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendDeliveryEmailProcess.xml"/>
 	</bean>
 	<bean id="sendReadyForPickupEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendReadyForPickupEmailProcess.xml"/>
 	</bean>
 	<bean id="sendOrderCancelledEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendOrderCancelledEmailProcess.xml"/>
 	</bean>
 	<bean id="sendOrderRefundEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendOrderRefundEmailProcess.xml"/>
 	</bean>
 	<bean id="sendOrderPartiallyCanceledEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendOrderPartiallyCanceledEmailProcess.xml"/>
 	</bean>
 	<bean id="sendOrderPartiallyRefundedEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendOrderPartiallyRefundedEmailProcess.xml"/>
 	</bean>
 	<bean id="sendNotPickedUpConsignmentCanceledEmailProcessDefinitionResource"
-	      class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+				class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
 		<property name="resource" value="classpath:/petshopcore/processes/sendNotPickedUpConsignmentCanceledEmailProcess.xml"/>
 	</bean>
 
 	<!-- Actions -->
 	<bean id="abstractAction" class="de.hybris.platform.processengine.action.AbstractAction"
-	      abstract="true">
+				abstract="true">
 		<property name="modelService" ref="modelService"/>
 		<property name="processParameterHelper" ref="processParameterHelper"/>
 	</bean>
 
 	<bean id="sendEmail" class="de.hybris.platform.acceleratorservices.process.email.actions.SendEmailAction"
-	       parent="abstractAction">
+				parent="abstractAction">
 		<property name="emailService" ref="emailService"/>
 	</bean>
 
 	<bean id="abstractGenerateEmailAction" class="de.hybris.platform.acceleratorservices.process.email.actions.GenerateEmailAction"
-	      parent="abstractAction" abstract="true">
+				parent="abstractAction" abstract="true">
 		<property name="modelService" ref="modelService"/>
 		<property name="cmsEmailPageService" ref="cmsEmailPageService"/>
 		<property name="contextResolutionStrategy" ref="processContextResolutionStrategy"/>
@@ -333,7 +332,7 @@
 	<bean id="generateOrderConfirmationEmail" parent="abstractGenerateEmailAction">
 		<property name="frontendTemplateName" value="OrderConfirmationEmailTemplate"/>
 	</bean>
-	
+
 	<bean id="generateDeliverySentEmail" parent="abstractGenerateEmailAction">
 		<property name="frontendTemplateName" value="DeliverySentEmailTemplate"/>
 	</bean>
@@ -341,11 +340,11 @@
 	<bean id="generateReadyForPickupEmail" parent="abstractGenerateEmailAction">
 		<property name="frontendTemplateName" value="ReadyForPickupEmailTemplate"/>
 	</bean>
-	
+
 	<bean id="generateOrderCancelledEmail" parent="abstractGenerateEmailAction">
 		<property name="frontendTemplateName" value="OrderCancelledEmailTemplate"/>
 	</bean>
-	
+
 	<bean id="generateOrderRefundEmail" parent="abstractGenerateEmailAction">
 		<property name="frontendTemplateName" value="OrderRefundEmailTemplate"/>
 	</bean>
@@ -361,21 +360,21 @@
 	</bean>
 
 	<bean id="removeSentEmail"
-	      class="de.hybris.platform.acceleratorservices.process.email.actions.RemoveSentEmailAction"
-	      parent="abstractAction">
+				class="de.hybris.platform.acceleratorservices.process.email.actions.RemoveSentEmailAction"
+				parent="abstractAction">
 		<property name="modelService" ref="modelService"/>
 	</bean>
 
 	<!-- Simple Suggestion Service -->
 	<alias alias="simpleSuggestionService" name="defaultSimpleSuggestionService"/>
 	<bean id="defaultSimpleSuggestionService"
-	      class="de.hybris.petshop.core.suggestion.impl.DefaultSimpleSuggestionService" >
+				class="de.hybris.petshop.core.suggestion.impl.DefaultSimpleSuggestionService" >
 		<property name="simpleSuggestionDao" ref="simpleSuggestionDao"/>
 	</bean>
 	<alias alias="simpleSuggestionDao" name="defaultSimpleSuggestionDao"/>
 	<bean id="defaultSimpleSuggestionDao"
-	      class="de.hybris.petshop.core.suggestion.dao.impl.DefaultSimpleSuggestionDao"
-	      parent="abstractItemDao" >
+				class="de.hybris.petshop.core.suggestion.dao.impl.DefaultSimpleSuggestionDao"
+				parent="abstractItemDao" >
 		<property name="flexibleSearchService" ref="flexibleSearchService"/>
 	</bean>
 
@@ -386,15 +385,15 @@
 
 
 	<!-- checkout flow configuration -->
-	
+
 	<bean id="pickUpInStoreCheckoutFlowStrategy" class="de.hybris.petshop.core.checkout.flow.impl.PickUpInStoreCheckoutFlowStrategy" >
 		<property name="pickupStrategy" ref="pickupStrategy" />
 		<property name="defaultStrategy" ref="siteCheckoutFlowStrategy"/>
 		<property name="multiStepCheckoutFlowStrategy" ref="multiStepCheckoutFlowStrategy" />
-	</bean>	
+	</bean>
 
 	<bean id="siteCheckoutFlowStrategy"
-	      class="de.hybris.petshop.core.checkout.flow.impl.SiteCheckoutFlowStrategy" >
+				class="de.hybris.petshop.core.checkout.flow.impl.SiteCheckoutFlowStrategy" >
 		<!-- This strategy looks up a strategy based on the current site UID -->
 		<property name="cmsSiteService" ref="cmsSiteService"/>
 		<property name="siteMappings">
@@ -410,7 +409,7 @@
 	</bean>
 
 	<bean id="newCustomerCheckoutFlowStrategy"
-	      class="de.hybris.petshop.core.checkout.flow.impl.NewCustomerCheckoutFlowStrategy" >
+				class="de.hybris.petshop.core.checkout.flow.impl.NewCustomerCheckoutFlowStrategy" >
 		<!-- This strategy works out if the user has created any data -->
 		<property name="userService" ref="userService"/>
 		<property name="customerAccountService" ref="customerAccountService"/>
@@ -421,7 +420,7 @@
 	<!-- Product Reference Lookup Strategies-->
 	<alias name="apparelCrossSellingProductReferenceTargetStrategy" alias="crossSellingProductReferenceTargetStrategy"/>
 	<bean id="apparelCrossSellingProductReferenceTargetStrategy"
-	      parent="defaultCrossSellingProductReferenceTargetStrategy">
+				parent="defaultCrossSellingProductReferenceTargetStrategy">
 		<property name="productReferenceTargetStrategies">
 			<list merge="true">
 				<ref bean="apparelSizeProductReferenceTargetStrategy"/>
@@ -430,9 +429,21 @@
 	</bean>
 
 	<bean id="apparelSizeProductReferenceTargetStrategy"
-	      class="de.hybris.petshop.core.strategies.impl.ApparelSizeProductReferenceTargetStrategy">
+				class="de.hybris.petshop.core.strategies.impl.ApparelSizeProductReferenceTargetStrategy">
 		<property name="commerceCategoryService" ref="commerceCategoryService"/>
 		<property name="rootCategoryCode" value="categories"/>
 	</bean>
-	
+
+
+	<!--custom beans-->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="properties" ref="hybrisProperties"/>
+	</bean>
+
+	<bean id="loyaltyPointConfiguration" class="de.hybris.petshop.config.LoyaltyPointConfiguration">
+		<property name="orderThreshold" value="${config.loyaltypoint.orderThreshold}"/>
+		<property name="currency" value="${config.loyaltypoint.currency}"/>
+		<property name="maxOrderPercentage" value="${config.loyaltypoint.maxOrderPercentage}"/>
+	</bean>
+
 </beans>

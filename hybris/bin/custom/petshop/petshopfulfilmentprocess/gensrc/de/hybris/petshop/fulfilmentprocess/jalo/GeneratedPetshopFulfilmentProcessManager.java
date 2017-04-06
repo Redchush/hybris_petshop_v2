@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 06.04.2017 15:18:19                         ---
+ * --- Generated at 06.04.2017 16:46:53                         ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -17,6 +17,7 @@
  */
 package de.hybris.petshop.fulfilmentprocess.jalo;
 
+import de.hybris.petshop.fulfilmentprocess.constants.PetshopFulfilmentProcessConstants;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.SessionContext;
@@ -24,7 +25,6 @@ import de.hybris.platform.jalo.enumeration.EnumerationValue;
 import de.hybris.platform.jalo.extension.Extension;
 import de.hybris.platform.ordersplitting.jalo.ConsignmentProcess;
 import de.hybris.platform.processengine.jalo.BusinessProcess;
-import de.hybris.petshop.fulfilmentprocess.constants.PetshopFulfilmentProcessConstants;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;

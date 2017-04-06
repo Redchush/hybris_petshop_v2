@@ -86,6 +86,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			false
 		);
 	
+		createItemType(
+			"PetshopProduct",
+			"Product",
+			de.hybris.petshop.core.jalo.PetshopProduct.class,
+			null,
+			false,
+			null,
+			false
+		);
+	
 		createEnumerationType(
 			"SwatchColorEnum",
 			null
@@ -125,6 +135,14 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				single_createattr_ApparelSizeVariantProduct_size();
 			
 				single_createattr_ElectronicsColorVariantProduct_color();
+			
+				single_createattr_PetshopProduct_loyaltyPointValue();
+			
+				single_createattr_Customer_totalLoyaltyPoints();
+			
+				single_createattr_AbstractOrder_totalLoyaltyPoints();
+			
+				single_createattr_AbstractOrderEntry_totalLoyaltyPoints();
 			
 
 	}
@@ -210,6 +228,74 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"localized:java.lang.String",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					"VariantAttributeDescriptor",
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_PetshopProduct_loyaltyPointValue() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"PetshopProduct", 
+					"loyaltyPointValue",  
+					null,
+					"java.lang.Integer",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Customer_totalLoyaltyPoints() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Customer", 
+					"totalLoyaltyPoints",  
+					null,
+					"java.lang.Integer",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_AbstractOrder_totalLoyaltyPoints() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"AbstractOrder", 
+					"totalLoyaltyPoints",  
+					null,
+					"java.lang.Integer",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_AbstractOrderEntry_totalLoyaltyPoints() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"AbstractOrderEntry", 
+					"totalLoyaltyPoints",  
+					null,
+					"java.lang.Integer",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG,
+					null,
 					sqlColumnDefinitions
 				);
 			
@@ -307,6 +393,57 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				}
 			
 			single_setAttributeProperties_ElectronicsColorVariantProduct_color();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				setItemTypeProperties(
+					"PetshopProduct",
+					false,
+					true,
+					true,
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_PetshopProduct_loyaltyPointValue();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				changeMetaType(
+					"Customer",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_Customer_totalLoyaltyPoints();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				changeMetaType(
+					"AbstractOrder",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_AbstractOrder_totalLoyaltyPoints();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				changeMetaType(
+					"AbstractOrderEntry",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_AbstractOrderEntry_totalLoyaltyPoints();
 		
 				setDefaultProperties(
 					"GenderList",
@@ -438,6 +575,94 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 								true,
 								true,
 								"VariantAttributeDescriptor",
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_PetshopProduct_loyaltyPointValue() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"PetshopProduct", 
+								"loyaltyPointValue",
+								false, 
+								0,
+								"0",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Customer_totalLoyaltyPoints() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Customer", 
+								"totalLoyaltyPoints",
+								false, 
+								0,
+								"0",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_AbstractOrder_totalLoyaltyPoints() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"AbstractOrder", 
+								"totalLoyaltyPoints",
+								false, 
+								0,
+								"0",
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_AbstractOrderEntry_totalLoyaltyPoints() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"AbstractOrderEntry", 
+								"totalLoyaltyPoints",
+								false, 
+								0,
+								"0",
+								null,
+								true,
+								true,
+								null,
 								customPropsMap,
 								null
 							);

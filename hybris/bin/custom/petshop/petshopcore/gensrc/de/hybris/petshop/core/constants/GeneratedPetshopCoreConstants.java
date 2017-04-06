@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 06.04.2017 15:18:19                         ---
+ * --- Generated at 06.04.2017 16:46:53                         ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -31,11 +31,23 @@ public class GeneratedPetshopCoreConstants
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
+		public static final String PETSHOPPRODUCT = "PetshopProduct".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
 	}
 	public static class Attributes
 	{
-		// no constants defined.
+		public static class AbstractOrder
+		{
+			public static final String TOTALLOYALTYPOINTS = "totalLoyaltyPoints".intern();
+		}
+		public static class AbstractOrderEntry
+		{
+			public static final String TOTALLOYALTYPOINTS = "totalLoyaltyPoints".intern();
+		}
+		public static class Customer
+		{
+			public static final String TOTALLOYALTYPOINTS = "totalLoyaltyPoints".intern();
+		}
 	}
 	public static class Enumerations
 	{

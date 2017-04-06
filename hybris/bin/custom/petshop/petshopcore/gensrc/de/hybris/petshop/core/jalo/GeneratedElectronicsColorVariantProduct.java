@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 06.04.2017 15:18:19                         ---
+ * --- Generated at 06.04.2017 16:46:53                         ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -17,13 +17,13 @@
  */
 package de.hybris.petshop.core.jalo;
 
+import de.hybris.petshop.core.constants.PetshopCoreConstants;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloInvalidParameterException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.c2l.C2LManager;
 import de.hybris.platform.jalo.c2l.Language;
 import de.hybris.platform.variants.jalo.VariantProduct;
-import de.hybris.petshop.core.constants.PetshopCoreConstants;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
