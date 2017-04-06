@@ -1,0 +1,9 @@
+#Ant properties
+#Fri May 13 09:46:17 CEST 2016
+builddate=20160513 0946
+description=petshopfacades
+name=petshopfacades
+releasedate=20150915 1445
+vendor=hybris
+version=5.7.0.12
+version.api=5.7.0

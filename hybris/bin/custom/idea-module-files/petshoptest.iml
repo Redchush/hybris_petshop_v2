@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module descriptorType="CUSTOM" importedAsReadOnly="false" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="petshoptestspring" name="petshoptestspring" removed="false">
+          <dependency>petshopfacadesspring==petshopfacades</dependency>
+          <file>file://$MODULE_DIR$/../petshop/petshoptest/resources/petshoptest-spring.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/../petshop/petshoptest/classes" />
+    <output-test url="file://$MODULE_DIR$/../petshop/petshoptest/classes" />
+    <exclude-output />
+    <javadoc-paths>
+      <root url="" />
+    </javadoc-paths>
+    <content url="file://$MODULE_DIR$/../petshop/petshoptest">
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/gensrc" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/testsrc" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/gensrc" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/testsrc" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/commonweb/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/commonweb/gensrc" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/commonweb/testsrc" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/acceleratoraddon/web/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/acceleratoraddon/web/gensrc" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/acceleratoraddon/web/testsrc" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/backoffice/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/backoffice/testsrc" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../petshop/petshoptest/backoffice/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/.externalToolBuilders" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/acceleratoraddon/web/addonsrc" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/acceleratoraddon/web/commonwebsrc" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/acceleratoraddon/web/testclasses" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/backoffice/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/commonweb/addonsrc" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/commonweb/commonwebsrc" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/commonweb/testclasses" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/eclipsebin" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/addonsrc" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/commonwebsrc" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/testclasses" />
+      <excludeFolder url="file://$MODULE_DIR$/../petshop/petshoptest/web/webroot/WEB-INF/classes" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../petshop/petshoptest/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../petshop/petshoptest/lib" recursive="true" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="petshopfacades" exported="" />
+  </component>
+</module>
